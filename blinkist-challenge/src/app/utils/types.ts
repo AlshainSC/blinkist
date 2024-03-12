@@ -21,3 +21,16 @@ export interface ArticleData {
     content: ContentBlock[]
   }[]
 }
+
+//Events
+export interface PageviewEvent {
+  url: string
+  variation: string | null
+  visitorId: string | null
+}
+
+export interface ClickEvent {
+  url: string
+  event: string
+  variation: string | null
+}

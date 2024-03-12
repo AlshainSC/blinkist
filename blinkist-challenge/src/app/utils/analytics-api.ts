@@ -1,3 +1,4 @@
+import { ClickEvent, PageviewEvent } from "./types"
 import { getClickData } from "./utils"
 
 /**
@@ -5,7 +6,7 @@ import { getClickData } from "./utils"
  * Send as params whatever you might seem valuable to send.
  * The URL is probably a good start though.
  */
-export const trackPageview = (params: any) => {
+export const trackPageview = (params: PageviewEvent) => {
   console.log(`--> Tracking Pageview: `, params)
 }
 
@@ -14,11 +15,11 @@ export const trackPageview = (params: any) => {
  * Send as params whatever you might seem valuable to send.
  * The URL and an event name are probably a good start though.
  */
-export const trackEvent = (params: any) => {
+export const trackEvent = (params: ClickEvent) => {
   console.log(`--> Tracking Event: `, params)
 }
 
-const calculateCTR = (variation: any) => {
+const calculateCTR = (variation: string) => {
   const clickData = getClickData()
   let uniqueClicks = 0
   let totalClicks = 0

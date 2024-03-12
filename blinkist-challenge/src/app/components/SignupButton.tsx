@@ -6,11 +6,10 @@ import { getVisitorId, incrementClickCount } from "../utils/utils"
 
 const SignupButton: React.FC<SignupButtonProps> = ({ variation }) => {
   const handleClick = () => {
-    const { assignedVariation } = useContext(ABTestContext)
     const visitorId = getVisitorId()
 
-    if (assignedVariation && visitorId) {
-      incrementClickCount(visitorId, assignedVariation)
+    if (variation && visitorId) {
+      incrementClickCount(visitorId, variation)
     }
 
     trackEvent({
