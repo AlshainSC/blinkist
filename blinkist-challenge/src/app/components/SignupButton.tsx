@@ -19,7 +19,14 @@ const SignupButton: React.FC<SignupButtonProps> = ({ variation }) => {
     })
   }
 
-  return <button onClick={handleClick}>Sign Up</button>
+  return (
+    <button
+      className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded mt-4"
+      onClick={handleClick}
+    >
+      Sign Up
+    </button>
+  )
 }
 
 export default SignupButton

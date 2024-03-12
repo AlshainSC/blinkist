@@ -18,18 +18,3 @@ export const trackPageview = (params: PageviewEvent) => {
 export const trackEvent = (params: ClickEvent) => {
   console.log(`--> Tracking Event: `, params)
 }
-
-const calculateCTR = (variation: string) => {
-  const clickData = getClickData()
-  let uniqueClicks = 0
-  let totalClicks = 0
-
-  for (const [key, count] of Object.entries(clickData)) {
-    if (key.endsWith(`-${variation}`)) {
-      uniqueClicks++
-      totalClicks += count as number
-    }
-  }
-
-  return totalClicks > 0 ? uniqueClicks / totalClicks : 0
-}
