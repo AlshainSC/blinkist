@@ -33,12 +33,11 @@ const ABTestManager: React.FC<{ children: React.ReactNode }> = ({
   }, [assignedVariation])
 
   const determineVariation = (visitorId: string) => {
-    // Use a simple hash function for consistent variation assignment
+    // Hash for consistent variation assignment
     let hash = 0
     for (let i = 0; i < visitorId.length; i++) {
       hash = (hash << 5) - hash + visitorId.charCodeAt(i)
       hash |= 0 // Convert to 32bit integer
-      console.log(hash, "hash")
     }
     return hash % 2 === 0 ? "A" : "B"
   }

@@ -13,7 +13,6 @@ const ArticleContent: React.FC = () => {
   }, [])
 
   const renderContentBlock = (block: ContentBlock) => {
-    console.log("block", block)
     switch (block.type) {
       case "text":
         return <p>{block.content}</p>
