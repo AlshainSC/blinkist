@@ -1,7 +1,6 @@
-import React, { useContext } from "react"
+import React from "react"
 import { SignupButtonProps } from "../utils/types"
 import { trackEvent } from "../utils/analytics-api"
-import { ABTestContext } from "./ABTestManager"
 import { getVisitorId, incrementClickCount } from "../utils/utils"
 
 const SignupButton: React.FC<SignupButtonProps> = ({ variation }) => {

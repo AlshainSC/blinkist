@@ -1,5 +1,4 @@
 import { ClickEvent, PageviewEvent } from "./types"
-import { getClickData } from "./utils"
 
 /**
  * Tracks a pageview to our "imaginary api" - in this demo just the browser console. ;)

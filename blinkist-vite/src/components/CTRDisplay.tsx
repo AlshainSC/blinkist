@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { getClickData, calculatePartialCTR } from "../utils/utils"
+import { calculatePartialCTR } from "../utils/utils"
 
 const CTRDisplay: React.FC = () => {
   const [ctrDisplay, setCtrDisplay] = useState<{
@@ -7,19 +7,16 @@ const CTRDisplay: React.FC = () => {
   } | null>(null)
 
   const fetchCTR = () => {
-    const clickData = getClickData()
     const result: { [variation: string]: number } = {}
     const timeWindow = 60 * 60 * 1000
 
     for (const variation of ["A", "B"]) {
-      // Replace with your actual variations
       result[variation] = calculatePartialCTR(variation, timeWindow)
     }
 
     setCtrDisplay(result)
   }
 
-  // Fetch data initially
   useEffect(() => {
     fetchCTR()
   }, [])

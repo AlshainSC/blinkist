@@ -4,7 +4,6 @@ import { VariationContextData } from "../utils/types"
 import { createContext, useEffect, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 import { trackPageview } from "./analytics-api"
-import { PageviewEvent } from "./types"
 
 export const getVisitorId = () => {
   const existingVisitorId = localStorage.getItem("visitorId")

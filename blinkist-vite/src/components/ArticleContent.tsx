@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useContext, ReactNode } from "react"
-import {
-  ContentBlock,
-  ArticleData,
-  Article,
-  ContentBlockComponent
-} from "../utils/types"
+import { ContentBlock, ArticleData, Article } from "../utils/types"
 import jsonData from "../data/content.json"
 import { ABTestContext } from "../utils/utils"
 
@@ -26,6 +21,7 @@ const ArticleContent: React.FC = () => {
     ),
     video: ({ content }: ContentBlock) => (
       <iframe
+        title="Article Video"
         width={560}
         height={315}
         className="w-1/2 h-auto flex-1"

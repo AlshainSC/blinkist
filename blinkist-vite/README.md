@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+`npm i`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`npm run dev`
 
-Currently, two official plugins are available:
+## Technologies used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite, React, TailwindCSS, UUID
 
-## Expanding the ESLint configuration
+## Thoughts and Considerations:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Considered a few different approaches for CTR, Pageviews, and Event storage. Local, Session, and Cookies, but in the end decided local was going to be the most straightforward
+- CTR threw me off quite a bit at first and it took me a while to work out. I'm still not happy with it and I'd redo that implementation with some input from a senior.
+- The current set up is limited in the amount of data actually gathered and sent. I'd expand on that and clean up the data structure being sent. Also I definitely would have preferred to set up a minimal backend, and may still.
+- The challenge was a fun one and left a lot of room for interpretation. Given more time I'd clean up the structure and styling drastically, flesh out the error handling quite a bit more, and maybe get larger/more complex data to work with. I also think the types could be cleaned up and improved.
