@@ -1,0 +1,39 @@
+{
+  "title": "",
+  "variations": [
+    {
+      "id": "A",
+      "content": [
+        {
+          "type": "text",
+          "content": "Variation A: A Book and a Song I Enjoy"
+        },
+        {
+          "type": "image",
+          "content": "https://i.pinimg.com/originals/1a/fd/d4/1afdd47505f634124a3a4003211740e7.jpg"
+        },
+        {
+          "type": "video",
+          "content": "https://www.youtube.com/embed/91mBYino-oU?si=dxtu5IK05Llzeo7D"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "content": [
+        {
+          "type": "text",
+          "content": "Variation B: A Book and a Song I Enjoy"
+        },
+        {
+          "type": "image",
+          "content": "https://i.pinimg.com/originals/1a/fd/d4/1afdd47505f634124a3a4003211740e7.jpg"
+        },
+        {
+          "type": "video",
+          "content": "https://www.youtube.com/embed/91mBYino-oU?si=dxtu5IK05Llzeo7D"
+        }
+      ]
+    }
+  ]
+}

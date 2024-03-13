@@ -9,9 +9,18 @@ export interface SignupButtonProps {
 }
 
 // Article
+
+export interface ContentBlockComponent {
+  (block: ContentBlock): React.ReactElement
+}
+export type Article = {
+  [key: string]: React.FC<ContentBlock>
+}
+
 export interface ContentBlock {
-  type: "text" | "image" | "video"
+  type: string
   content: string
+  className?: string
 }
 
 export interface ArticleData {
